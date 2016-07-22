@@ -19,13 +19,16 @@ html {
   position: relative;
 }
 
-
+h1 {
+  font-weight: 200;
+}
 
 h2 {
   font-weight: 200;
 }
 
 .jumbotron {
+  max-height: 100px;
 }
 
 .jumbotron h2 {
@@ -41,7 +44,6 @@ h3 {
 
 .navbar {
   height: 120px;
-  /*background: rgba(202, 224, 209, .95);*/
   background: rgba(40, 75, 99, .95);
 }
 
@@ -51,8 +53,22 @@ h3 {
   color: white;
   font-size: 20px;
   font-weight: 100;
+  letter-spacing: 1px;
 }
 
+.phone {
+  margin-top: 80px;
+  margin-left: 80px;
+  color: white;
+  font-weight: 100;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.phone a {
+  text-decoration: none;
+  color: white;
+}
 .jumbo-cont {
   margin: 0 auto;
 }
@@ -78,24 +94,28 @@ a.button {
   text-decoration: none;
 }
 
-.dvt-content > a {
+.hover-effect {
   position: relative;
-  color: #000;
+  color: #488E78;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+
+.hover-effect:hover {
+  color: #488E78;
   text-decoration: none;
 }
 
-.dvt-content > a:hover {
-  color: #000;
-}
-
-.dvt-content > a::before {
+.hover-effect::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #488E78;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -103,7 +123,7 @@ a.button {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.dvt-content > a:hover:before {
+.hover-effect:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -134,14 +154,20 @@ a.button {
 .find-us {
   background-image: url("../images/uviaMap.jpg");
   height: 200px;
+  line-height: 200px;
   justify-content: center;
   z-index: 1;
   margin-bottom: 100px;
 }
 
-.find-us h3 {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.find-us a {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #284B63;
+  font-weight: 200;
+
 }
 
 .jumbotron {
@@ -163,17 +189,81 @@ a.button {
   font-weight: 100;
   text-decoration: none;
   height: 40px;
+  transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+}
+
+.panel-buttons:hover {
+  background-color: white;
+  color: #284B63;
 }
 
 .footer {
-  position: absolute;
+ position: absolute;
  bottom: 0;
  width: 100%;
  /* Set the fixed height of the footer here */
- height: 100px;
+ height: 120px;
  background: rgba(40, 75, 99, .95);
- margin-top: 50px;
+ margin-top: 80px;
+ margin-bottom: 10px;
  color: white;
  text-align: center;
  font-weight: 100;
+}
+
+.footer-container {
+  position: relative;
+  height: inherit;
+}
+
+.copyright {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.clinics-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.dvt-image {
+  /*display: inline-block;*/
+}
+
+.dvt-info-content {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.dvt-info-content h1 {
+  margin-bottom: 15px;
+}
+
+.dvt-info-content h2 {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.dvt-treatment {
+  margin-bottom: 30px;
+}
+
+.clinics-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  align-items: center;
+  margin-left: 15px;
+  float: left;
+}
+
+.footer-logo {
+  margin: 10px;
+
+}
+
+.footer-address {
+  float: right;
 }
